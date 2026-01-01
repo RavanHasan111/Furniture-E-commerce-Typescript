@@ -7,7 +7,7 @@ export default function Wishlist() {
         {
             id: "1",
             title: "iPhone 15 Pro",
-            description: "Новейший смартфон от Apple с титановым корпусом",
+            description: "The latest Apple smartphone with a titanium body",
             category: "smartphones",
             price: 999.99,
             discountPercentage: 5,
@@ -36,7 +36,7 @@ export default function Wishlist() {
         {
             id: "2",
             title: "MacBook Air M2",
-            description: "Ультратонкий ноутбук с чипом M2",
+            description: "Ultra-thin laptop with the M2 chip",
             category: "laptops",
             price: 1299.99,
             discountPercentage: 0,
@@ -65,7 +65,7 @@ export default function Wishlist() {
         {
             id: "3",
             title: "AirPods Pro",
-            description: "Беспроводные наушники с активным шумоподавлением",
+            description: "Wireless earbuds with active noise cancellation",
             category: "audio",
             price: 249.99,
             discountPercentage: 10,
@@ -102,24 +102,24 @@ export default function Wishlist() {
             <div className="rounded-[32px] border border-slate-100 bg-white p-8 shadow-xl">
                 <div className="mb-6 flex items-center justify-between">
                     <div>
-                        <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Избранное</p>
-                        <h2 className="mt-2 text-3xl font-semibold text-slate-900">Мой список желаний</h2>
+                        <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Favorites</p>
+                        <h2 className="mt-2 text-3xl font-semibold text-slate-900">My wishlist</h2>
                     </div>
                     <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700">
-                        {wishlistItems.length} товаров
+                        {wishlistItems.length} items
                     </span>
                 </div>
 
                 {wishlistItems.length === 0 ? (
                     <div className="rounded-2xl border border-slate-100 bg-slate-50 p-12 text-center">
                         <p className="text-6xl mb-4">❤️</p>
-                        <p className="text-lg font-semibold text-slate-700">Ваш список желаний пуст</p>
-                        <p className="mt-2 text-sm text-slate-500">Добавляйте товары в избранное, чтобы не потерять их</p>
+                        <p className="text-lg font-semibold text-slate-700">Your wishlist is empty</p>
+                        <p className="mt-2 text-sm text-slate-500">Add items to favorites so you don’t lose them</p>
                         <Link
                             to="/shop"
                             className="mt-4 inline-block rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
                         >
-                            Перейти в магазин
+                            Go to shop
                         </Link>
                     </div>
                 ) : (
@@ -177,7 +177,7 @@ export default function Wishlist() {
                                     </Link>
                                     <div className="mt-4 flex gap-2">
                                         <button className="flex-1 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50">
-                                            В корзину
+                                            Add to cart
                                         </button>
                                         <button className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-2.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100">
                                             ❤️

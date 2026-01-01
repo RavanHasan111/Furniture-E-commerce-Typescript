@@ -4,10 +4,10 @@ export default function ProfileLayout() {
     const location = useLocation();
 
     const navItems = [
-        { path: "/profile/", label: "Профиль", icon: "👤" },
-        { path: "/profile/orders", label: "Заказы", icon: "📦" },
-        { path: "/profile/notifications", label: "Уведомления", icon: "🔔" },
-        { path: "/profile/wishlist", label: "Избранное", icon: "❤️" },
+        { path: "/profile/", label: "Profile", icon: "👤" },
+        { path: "/profile/orders", label: "Orders", icon: "📦" },
+        { path: "/profile/notifications", label: "Notifications", icon: "🔔" },
+        { path: "/profile/wishlist", label: "Wishlist", icon: "❤️" },
     ];
 
     const isActive = (path: string) => {
@@ -22,9 +22,9 @@ export default function ProfileLayout() {
             <div className="mx-auto w-full max-w-7xl">
                 <div className="mb-8 rounded-[36px] bg-slate-900 p-10 text-white shadow-2xl">
                     <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Dashboard</p>
-                    <h1 className="mt-2 text-4xl font-semibold">Личный кабинет</h1>
+                    <h1 className="mt-2 text-4xl font-semibold">Account area</h1>
                     <p className="mt-3 max-w-2xl text-slate-300">
-                        Управляйте личными данными, адресами и настройками уведомлений. Все заказы и подписки синхронизированы.
+                        Manage your personal data, addresses and notification settings. All orders and subscriptions are synchronized.
                     </p>
                 </div>
 

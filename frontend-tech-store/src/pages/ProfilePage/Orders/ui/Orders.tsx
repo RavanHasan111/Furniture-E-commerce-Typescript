@@ -45,13 +45,13 @@ export default function Orders() {
     const getStatusLabel = (status: string) => {
         switch (status) {
             case "delivered":
-                return "Доставлен";
+                return "Delivered";
             case "shipped":
-                return "Отправлен";
+                return "Shipped";
             case "pending":
-                return "В обработке";
+                return "In progress";
             case "paid":
-                return "Оплачен";
+                return "Paid";
             default:
                 return status;
         }
@@ -62,19 +62,19 @@ export default function Orders() {
             <div className="rounded-[32px] border border-slate-100 bg-white p-8 shadow-xl">
                 <div className="mb-6 flex items-center justify-between">
                     <div>
-                        <p className="text-sm uppercase tracking-[0.3em] text-slate-400">История</p>
-                        <h2 className="mt-2 text-3xl font-semibold text-slate-900">Мои заказы</h2>
+                        <p className="text-sm uppercase tracking-[0.3em] text-slate-400">History</p>
+                        <h2 className="mt-2 text-3xl font-semibold text-slate-900">My orders</h2>
                     </div>
                     <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700">
-                        {orders.length} заказов
+                        {orders.length} orders
                     </span>
                 </div>
 
                 {orders.length === 0 ? (
                     <div className="rounded-2xl border border-slate-100 bg-slate-50 p-12 text-center">
                         <p className="text-6xl mb-4">📦</p>
-                        <p className="text-lg font-semibold text-slate-700">У вас пока нет заказов</p>
-                        <p className="mt-2 text-sm text-slate-500">Начните покупки, чтобы увидеть их здесь</p>
+                        <p className="text-lg font-semibold text-slate-700">You don’t have any orders yet</p>
+                        <p className="mt-2 text-sm text-slate-500">Start shopping to see your orders here</p>
                     </div>
                 ) : (
                     <div className="space-y-4">
@@ -105,7 +105,7 @@ export default function Orders() {
                                             ))}
                                         </div>
                                         <p className="mt-3 text-xs text-slate-500">
-                                            Дата заказа: {new Date(order.createdAt).toLocaleDateString("ru-RU")}
+                                            Order date: {new Date(order.createdAt).toLocaleDateString("en-US")}
                                         </p>
                                     </div>
                                     <div className="flex flex-col items-end gap-2">
@@ -113,7 +113,7 @@ export default function Orders() {
                                             ${order.totalPrice.toFixed(2)}
                                         </p>
                                         <button className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50">
-                                            Детали
+                                            Details
                                         </button>
                                     </div>
                                 </div>
